@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="mark1.png" type="image/x-icon">
+    <title>+3 Result Checker</title>
+
+    <!-- Bootstrap V5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    .gp {
+        width: 43px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Semester Mark Statement</h1>
+    </div>
+    <div class="container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Semester-1
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Paper Code</th>
+                                    <th scope="col">Credit</th>
+                                    <th scope="col">Grade Point</th>
+                                    <th scope="col">Credit Point</th>
+                                     
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">C-1</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c1"></td>
+                                    <td>
+                                        <div id="cp1"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">C-2</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c2"></td>
+                                    <td>
+                                        <div id="cp2"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">GE-1</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="ge1"></td>
+                                    <td>
+                                        <div id="cp3"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">AECC-1</th>
+                                    <td>4</td>
+                                    <td><input type="text" class="gp" id="aecc1"></td>
+                                    <td>
+                                        <div id="cp4"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">EV-1</th>
+                                    <td>1</td>
+                                    <td><input type="text" class="gp" id="ev1"></td>
+                                    <td>
+                                        <div id="cp5"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">SGPA</th>
+                                    <td>
+                                        <div id="sem1"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-outline-primary" onclick="sem1();grade()">Show</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Semester-2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Paper Code</th>
+                                    <th scope="col">Credit</th>
+                                    <th scope="col">Grade Point</th>
+                                    <th scope="col">Credit Point</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">C-3</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c3"></td>
+                                    <td>
+                                        <div id="cp6"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">C-4</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c4"></td>
+                                    <td>
+                                        <div id="cp7"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">GE-2</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="ge2"></td>
+                                    <td>
+                                        <div id="cp8"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">AECC-2</th>
+                                    <td>4</td>
+                                    <td><input type="text" class="gp" id="aecc2"></td>
+                                    <td>
+                                        <div id="cp9"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">EV-2</th>
+                                    <td>1</td>
+                                    <td><input type="text" class="gp" id="ev2"></td>
+                                    <td>
+                                        <div id="cp10"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">SGPA</th>
+                                    <td>
+                                        <div id="sem2"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-outline-primary" onclick="sem2()">Show</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Semester-3
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Paper Code</th>
+                                    <th scope="col">Credit</th>
+                                    <th scope="col">Grade Point</th>
+                                    <th scope="col">Credit Point</th>
+                                     
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">C-5</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c5"></td>
+                                    <td>
+                                        <div id="cp11"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">C-6</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c6"></td>
+                                    <td>
+                                        <div id="cp12"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                <tr>
+                                    <th scope="row">C-7</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c7"></td>
+                                    <td>
+                                        <div id="cp13"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">GE-3</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="ge3"></td>
+                                    <td>
+                                        <div id="cp14"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">SEC-1</th>
+                                    <td>4</td>
+                                    <td><input type="text" class="gp" id="sec1"></td>
+                                    <td>
+                                        <div id="cp15"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">EV-3</th>
+                                    <td>1</td>
+                                    <td><input type="text" class="gp" id="ev3"></td>
+                                    <td>
+                                        <div id="cp16"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">SGPA</th>
+                                    <td>
+                                        <div id="sem3"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-outline-primary" onclick="sem3()">Show</button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Semester-4
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Paper Code</th>
+                                    <th scope="col">Credit</th>
+                                    <th scope="col">Grade Point</th>
+                                    <th scope="col">Credit Point</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">C-8</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c8"></td>
+                                    <td>
+                                        <div id="cp17"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">C-9</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c9"></td>
+                                    <td>
+                                        <div id="cp18"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                <tr>
+                                    <th scope="row">C-10</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c10"></td>
+                                    <td>
+                                        <div id="cp19"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">GE-4</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="ge4"></td>
+                                    <td>
+                                        <div id="cp20"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">SEC-2</th>
+                                    <td>4</td>
+                                    <td><input type="text" class="gp" id="sec2"></td>
+                                    <td>
+                                        <div id="cp21"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">EV-4</th>
+                                    <td>1</td>
+                                    <td><input type="text" class="gp" id="ev4"></td>
+                                    <td>
+                                        <div id="cp22"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">SGPA</th>
+                                    <td>
+                                        <div id="sem4"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-outline-primary" onclick="sem4()">Show</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        Semester-5
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Paper Code</th>
+                                    <th scope="col">Credit</th>
+                                    <th scope="col">Grade Point</th>
+                                    <th scope="col">Credit Point</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">C-11</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c11"></td>
+                                    <td>
+                                        <div id="cp23"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">C-12</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c12"></td>
+                                    <td>
+                                        <div id="cp24"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                <tr>
+                                    <th scope="row">DSE-1</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="dse1"></td>
+                                    <td>
+                                        <div id="cp25"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">DSE-2</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="dse2"></td>
+                                    <td>
+                                        <div id="cp26"></div>
+                                    </td>
+
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">EV-5</th>
+                                    <td>1</td>
+                                    <td><input type="text" class="gp" id="ev5"></td>
+                                    <td>
+                                        <div id="cp27"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">SGPA</th>
+                                    <td>
+                                        <div id="sem5"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-outline-primary" onclick="sem5()">Show</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        Semester-6
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Paper Code</th>
+                                    <th scope="col">Credit</th>
+                                    <th scope="col">Grade Point</th>
+                                    <th scope="col">Credit Point</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">C-13</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c13"></td>
+                                    <td>
+                                        <div id="cp28"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">C-14</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="c14"></td>
+                                    <td>
+                                        <div id="cp29"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                <tr>
+                                    <th scope="row">DSE-3</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="dse3"></td>
+                                    <td>
+                                        <div id="cp30"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">DSE-4</th>
+                                    <td>6</td>
+                                    <td><input type="text" class="gp" id="dse4"></td>
+                                    <td>
+                                        <div id="cp31"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">EV-6</th>
+                                    <td>1</td>
+                                    <td><input type="text" class="gp" id="ev6"></td>
+                                    <td>
+                                        <div id="cp32"></div>
+                                    </td>
+                                      
+                                </tr>
+                                <tr>
+                                    <th scope="row">SGPA</th>
+                                    <td>
+                                        <div id="sem6"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-outline-primary" onclick="sem6()">Show</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        SGPA to CGPA
+                    </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">SGPA</th>
+                                    <th scope="col">Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Semester-1</th>
+                                    <td><input type="text" class="gp" id="sgpa1"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Semester-2</th>
+                                    <td><input type="text" class="gp" id="sgpa2"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Semester-3</th>
+                                    <td><input type="text" class="gp" id="sgpa3"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Semester-4</th>
+                                    <td><input type="text" class="gp" id="sgpa4"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Semester-5</th>
+                                    <td><input type="text" class="gp" id="sgpa5"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Semester-6</th>
+                                    <td><input type="text" class="gp" id="sgpa6"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">CGPA</th>
+                                    <td>
+                                        <div id="cgpa"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-outline-primary" onclick="result()">Show</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    
+
+    // Semester-1
+    function sem1() {
+        let c1 = document.getElementById("c1").value;
+        let c2 = document.getElementById("c2").value;
+        let ge1 = document.getElementById("ge1").value;
+        let aecc1 = document.getElementById("aecc1").value;
+        let ev1 = document.getElementById("ev1").value;
+
+        let cp1 = c1 * 6;
+        let cp2 = c2 * 6;
+        let cp3 = ge1 * 6;
+        let cp4 = aecc1 * 4;
+        let cp5 = ev1 * 1;
+
+        document.getElementById("cp1").innerHTML = cp1;
+        document.getElementById("cp2").innerHTML = cp2;
+        document.getElementById("cp3").innerHTML = cp3;
+        document.getElementById("cp4").innerHTML = cp4;
+        document.getElementById("cp5").innerHTML = cp5;
+
+        let tcp1 = cp1 + cp2 + cp3 + cp4 + cp5;
+        let credit1 = 6 + 6 + 6 + 4 + 1;
+
+        const SGPA1 = tcp1 / credit1;
+
+        document.getElementById("sem1").innerHTML = SGPA1;
+    }
+
+    // Semester-2
+    function sem2() {
+        let c3 = document.getElementById("c3").value;
+        let c4 = document.getElementById("c4").value;
+        let ge2 = document.getElementById("ge2").value;
+        let aecc2 = document.getElementById("aecc2").value;
+        let ev2 = document.getElementById("ev2").value;
+
+        let cp6 = c3 * 6;
+        let cp7 = c4 * 6;
+        let cp8 = ge2 * 6;
+        let cp9 = aecc2 * 4;
+        let cp10 = ev2 * 1;
+
+        document.getElementById("cp6").innerHTML = cp6;
+        document.getElementById("cp7").innerHTML = cp7;
+        document.getElementById("cp8").innerHTML = cp8;
+        document.getElementById("cp9").innerHTML = cp9;
+        document.getElementById("cp10").innerHTML = cp10;
+
+        let tcp2 = cp6 + cp7 + cp8 + cp9 + cp10;
+        let credit2 = 6 + 6 + 6 + 4 + 1;
+
+        const SGPA2 = tcp2 / credit2;
+
+        document.getElementById("sem2").innerHTML = SGPA2;
+    }
+
+    //Semester-3
+    function sem3() {
+        let c5 = document.getElementById("c5").value;
+        let c6 = document.getElementById("c6").value;
+        let c7 = document.getElementById("c7").value;
+        let ge3 = document.getElementById("ge3").value;
+        let sec1 = document.getElementById("sec1").value;
+        let ev3 = document.getElementById("ev3").value;
+
+        let cp11 = c5 * 6;
+        let cp12 = c6 * 6;
+        let cp13 = c7 * 6;
+        let cp14 = ge3 * 6;
+        let cp15 = sec1 * 4;
+        let cp16 = ev3 * 1;
+
+        document.getElementById("cp11").innerHTML = cp11;
+        document.getElementById("cp12").innerHTML = cp12;
+        document.getElementById("cp13").innerHTML = cp13;
+        document.getElementById("cp14").innerHTML = cp14;
+        document.getElementById("cp15").innerHTML = cp15;
+        document.getElementById("cp16").innerHTML = cp16;
+
+        let tcp3 = cp11 + cp12 + cp13 + cp14 + cp15 + cp16;
+        let credit3 = 6 + 6 + 6 + 6 + 4 + 1;
+
+        const SGPA3 = tcp3 / credit3;
+
+        document.getElementById("sem3").innerHTML = SGPA3;
+    }
+
+    //Semester-4
+    function sem4() {
+        let c8 = document.getElementById("c8").value;
+        let c9 = document.getElementById("c9").value;
+        let c10 = document.getElementById("c10").value;
+        let ge4 = document.getElementById("ge4").value;
+        let sec2 = document.getElementById("sec2").value;
+        let ev4 = document.getElementById("ev4").value;
+
+        let cp17 = c8 * 6;
+        let cp18 = c9 * 6;
+        let cp19 = c10 * 6;
+        let cp20 = ge4 * 6;
+        let cp21 = sec2 * 4;
+        let cp22 = ev4 * 1;
+
+        document.getElementById("cp17").innerHTML = cp17;
+        document.getElementById("cp18").innerHTML = cp18;
+        document.getElementById("cp19").innerHTML = cp19;
+        document.getElementById("cp20").innerHTML = cp20;
+        document.getElementById("cp21").innerHTML = cp21;
+        document.getElementById("cp22").innerHTML = cp22;
+
+        let tcp4 = cp17 + cp18 + cp19 + cp20 + cp21 + cp22;
+        let credit4 = 6 + 6 + 6 + 6 + 4 + 1;
+
+        const SGPA4 = tcp4 / credit4;
+
+        document.getElementById("sem4").innerHTML = SGPA4;
+    }
+
+    //Semester-5
+    function sem5() {
+        let c11 = document.getElementById("c11").value;
+        let c12 = document.getElementById("c12").value;
+        let dse1 = document.getElementById("dse1").value;
+        let dse2 = document.getElementById("dse2").value;
+        let ev5 = document.getElementById("ev5").value;
+
+        let cp23 = c11 * 6;
+        let cp24 = c12 * 6;
+        let cp25 = dse1 * 6;
+        let cp26 = dse2 * 6;
+        let cp27 = ev5 * 1;
+
+        document.getElementById("cp23").innerHTML = cp23;
+        document.getElementById("cp24").innerHTML = cp24;
+        document.getElementById("cp25").innerHTML = cp25;
+        document.getElementById("cp26").innerHTML = cp26;
+        document.getElementById("cp27").innerHTML = cp27;
+
+        let tcp4 = cp17 + cp18 + cp19 + cp20 + cp21 + cp22;
+        let credit4 = 6 + 6 + 6 + 6 + 4 + 1;
+
+        const SGPA4 = tcp4 / credit4;
+
+        document.getElementById("sem4").innerHTML = SGPA4;
+    }
+
+    //Semester-5
+    function sem5() {
+        let c11 = document.getElementById("c11").value;
+        let c12 = document.getElementById("c12").value;
+        let dse1 = document.getElementById("dse1").value;
+        let dse2 = document.getElementById("dse2").value;
+        let ev5 = document.getElementById("ev5").value;
+
+        let cp23 = c11 * 6;
+        let cp24 = c12 * 6;
+        let cp25 = dse1 * 6;
+        let cp26 = dse2 * 6;
+        let cp27 = ev5 * 1;
+
+        document.getElementById("cp23").innerHTML = cp23;
+        document.getElementById("cp24").innerHTML = cp24;
+        document.getElementById("cp25").innerHTML = cp25;
+        document.getElementById("cp26").innerHTML = cp26;
+        document.getElementById("cp27").innerHTML = cp27;
+
+        let tcp5 = cp23 + cp24 + cp25 + cp26 + cp27;
+        let credit5 = 6 + 6 + 6 + 6 + 1;
+
+        const SGPA5 = tcp5 / credit5;
+
+        document.getElementById("sem5").innerHTML = SGPA5;
+    }
+
+    //Semester-6
+    function sem6() {
+        let c13 = document.getElementById("c13").value;
+        let c14 = document.getElementById("c14").value;
+        let dse3 = document.getElementById("dse3").value;
+        let dse4 = document.getElementById("dse4").value;
+        let ev6 = document.getElementById("ev6").value;
+
+        let cp28 = c13 * 6;
+        let cp29 = c14 * 6;
+        let cp30 = dse3 * 6;
+        let cp31 = dse4 * 6;
+        let cp32 = ev6 * 1;
+
+        document.getElementById("cp28").innerHTML = cp28;
+        document.getElementById("cp29").innerHTML = cp29;
+        document.getElementById("cp30").innerHTML = cp30;
+        document.getElementById("cp31").innerHTML = cp31;
+        document.getElementById("cp32").innerHTML = cp32;
+
+        let tcp6 = cp28 + cp29 + cp30 + cp31 + cp32;
+        let credit6 = 6 + 6 + 6 + 6 + 1;
+
+        let SGPA6 = tcp6 / credit6;
+
+        document.getElementById("sem6").innerHTML = SGPA6;
+    }
+
+    //SGPA to CGPA
+    function result() {
+        let SGPA1 = document.getElementById("sgpa1").value;
+        let SGPA2 = document.getElementById("sgpa2").value;
+        let SGPA3 = document.getElementById("sgpa3").value;
+        let SGPA4 = document.getElementById("sgpa4").value;
+        let SGPA5 = document.getElementById("sgpa5").value;
+        let SGPA6 = document.getElementById("sgpa6").value;
+        let CGPA1 = ((23 * SGPA1) + (23 * SGPA2) + (29 * SGPA3) + (29 * SGPA4) + (25 * SGPA5) + (25 * SGPA6)) / 154;
+
+        document.getElementById("cgpa").innerHTML = CGPA1;
+    }
+
+    function grade(){
+        let x=document.getElementsByClassName("gp").value;
+        if( x >5 ){
+            document.getElementById("grade").innerHTML="O";
+        }
+
+    }
+
+
+
+</script>
+
+</html>
