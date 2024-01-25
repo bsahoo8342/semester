@@ -1,0 +1,21 @@
+---
+title: "Demo1"
+author: "Biswajit"
+date: "2023-11-01"
+output: html_document
+---
+
+```{r}
+m1=matrix(6:1,nrow = 3,ncol = 2,byrow = TRUE)
+m2=matrix(12:7,nrow = 3,ncol = 2,byrow = TRUE)
+print(m1)
+print(m2)
+```
+
+#input
+```{r}
+a=readline("Enter a valid number:")
+12
+print(a)
+```
+
